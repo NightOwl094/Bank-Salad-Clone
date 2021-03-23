@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="kor">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Bank Salad</title>
+
+    <meta name="author" content="nightowl094" />
+    <meta name="description" content="Bank Salad Copy" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1, minimum-scale=1"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- http://ogp.me/ -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Bank Salad Copy" />
+    <meta property="og:title" content="Bank Salad Copy" />
+    <meta property="og:description" content="Bank Salad clone coding" />
+    <meta property="og:image" content="img/logo__bank-salad.png" />
+    <meta property="og:url" content="https://www.banksalad.com/" />
+
+    <!-- https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started.html -->
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:site" content="Bank Salad" />
+    <meta property="twitter:title" content="Bank Salad Copy" />
+    <meta property="twitter:description" content="Bank Salad clone coding" />
+    <meta property="twitter:image" content="img/logo__bank-salad.png" />
+    <meta property="twitter:url" content="https://www.banksalad.com/" />
+
+    <link rel="apple-touch-icon" href="./favicon.png" />
+    <link rel="icon" href="./favicon.png" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.css"
+    />
+
+    <link rel="stylesheet" href="./css/glide.core.min.css" />
+    <link rel="stylesheet" href="./css/glide.theme.min.css" />
+    <link rel="stylesheet" href="./css/glide-custom.css" />
+
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+
+  <body>
+    <div class="body__container">
+      <!-- header -->
+      <header>
+        <div class="menu-group">
+          <div class="logo">
+            <a href="#"
+              >Bank Salad
+              <img src="/img/dm-logo.png" alt="logo" />
+            </a>
+          </div>
+
+          <ul class="main-menu">
+            <li><a href="#">카드</a></li>
+            <li><a href="#">은행</a></li>
+            <li><a href="#">투자</a></li>
+            <li><a href="#">대출</a></li>
+            <li><a href="#">연금</a></li>
+            <li><a href="#">핀테크</a></li>
+            <li><a href="#">매거진</a></li>
+          </ul>
+        </div>
+      </header>
+      <!-- ranking rolling banner -->
+      <section class="ranking">
+        <div class="ranking__container">
+          <div class="ranking__animation">
+            <a href="#">
+              <ul class="ranking-list">
+                <li>
+                  <div class="ranking-item-info-wrap">
+                    <span class="ranking-number">1</span>
+                    <h4 class="title">삼성카드 taptap O</h4>
+                  </div>
+                  <img src="./asset/samsung_2928.png" alt="" />
+                </li>
+              </ul>
+            </a>
+          </div>
+          <a href="#" class="ranking-btn"> 인기카드 더보기 </a>
+        </div>
+      </section>
+
+      <!-- visual -->
+      <section class="visual">
+        <div class="visual__container">
+          <div class="glide">
+            <div class="glide__track" data-glide-el="track">
+              <ul class="glide__slides">
+                <li class="glide__slide">
+                  <img src="./asset/bg/money-256315_1920.jpg" alt="" />
+                  <div class="content-container">
+                    <h1>
+                      <small> 데이터를 맛보다 </small>
+                      <p>드림메이커</p>
+                    </h1>
+                  </div>
+                </li>
+                <li class="glide__slide">
+                  <img src="./asset/bg/plastic-card-1647376_1920.jpg" alt="" />
+                </li>
+                <li class="glide__slide">
+                  <img
+                    src="./asset/bg/premium-image-of-Woman-holding-a-credit-card-against-a-pink.jpeg"
+                    alt=""
+                  />
+                </li>
+              </ul>
+
+              <div class="glide__arrows" data-glide-el="controls">
+                <button
+                  class="glide__arrow glide__arrow--left custom-arrow--left"
+                  data-glide-dir="<"
+                ></button>
+                <button
+                  class="glide__arrow glide__arrow--right custom-arrow--right"
+                  data-glide-dir=">"
+                ></button>
+              </div>
+
+              <div class="glide__bullets" data-glide-el="controls[nav]">
+                <button class="glide__bullet" data-glide-dir="=0"></button>
+                <button class="glide__bullet" data-glide-dir="=1"></button>
+                <button class="glide__bullet" data-glide-dir="=2"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+  <script type="module" src="./js/main.js"></script>
+</html>

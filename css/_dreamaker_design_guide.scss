@@ -1,0 +1,91 @@
+// TypoGraphy
+@mixin dm-headline-1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 96px;
+  letter-spacing: -1.5px;
+  font-weight: 200;
+}
+
+@mixin dm-headline-2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 60px;
+  letter-spacing: -0.5px;
+  font-weight: 200;
+}
+
+@mixin dm-headline-3 {
+  font-family: "Roboto", sans-serif;
+  font-size: 48px;
+  letter-spacing: 0px;
+  font-weight: 300;
+}
+
+@mixin dm-headline-4 {
+  font-family: "Roboto", sans-serif;
+  font-size: 34px;
+  letter-spacing: 0.25px;
+  font-weight: 300;
+}
+
+@mixin dm-headline-5 {
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  letter-spacing: 0px;
+  font-weight: 300;
+}
+
+@mixin dm-headline-6 {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  letter-spacing: 0.15px;
+  font-weight: 400;
+}
+
+@mixin dm-subtitle-1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.15px;
+  font-weight: 300;
+}
+
+@mixin dm-subtitle-2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.1px;
+  font-weight: 400;
+}
+
+@mixin dm-body-1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  font-weight: 300;
+}
+
+@mixin dm-body-2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.25px;
+  font-weight: 300;
+}
+
+@mixin dm-button {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  letter-spacing: 1.25px;
+  font-weight: 400;
+}
+
+@mixin dm-caption {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.4px;
+  font-weight: 300;
+}
+
+@mixin dm-overline {
+  font-family: "Roboto", sans-serif;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  font-weight: 300;
+}

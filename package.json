@@ -1,0 +1,22 @@
+{
+  "name": "bank-salad-clone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NightOwl094/Bank-Salad-Clone.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NightOwl094/Bank-Salad-Clone/issues"
+  },
+  "homepage": "https://github.com/NightOwl094/Bank-Salad-Clone#readme",
+  "dependencies": {
+    "@glidejs/glide": "^3.4.1"
+  }
+}

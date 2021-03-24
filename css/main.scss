@@ -1,4 +1,4 @@
-@import "_dreamaker_design_guide";
+@use "_dreamaker_design_guide" as guide;
 
 $primaryColor: #0070fa;
 $primaryColor-weak: #369fff;
@@ -6,17 +6,44 @@ $defaultTextColor: #666;
 $backgroundColor: #fbfbfb;
 $dividerColor: #f5f5f5;
 
-@mixin textColorChangeAnimation {
+$sectionHeight: 600px;
+
+@mixin smoothChangeAnimation {
   transition: all ease 0.5s 0s;
+}
+
+@mixin customCardElevationEffect {
+  box-shadow: 0px 0px 2px 0 rgba($color: #000, $alpha: 0.1);
+}
+
+@mixin customElevationEffect {
+  box-shadow: 2px 2px 2px rgba($color: #000, $alpha: 0.12);
+}
+
+@mixin defaultContainerOptions {
+  max-width: 940px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+/* Fade in tabs */
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 // common
 .body__container {
   font-family: "Roboto", sans-serif;
+  background: $backgroundColor;
 }
 
 a {
-  @include dm-subtitle-1;
+  @include guide.dm-subtitle-1;
   font-weight: 500;
   text-decoration: none;
   color: $defaultTextColor;
@@ -25,6 +52,7 @@ a {
 // header
 header {
   margin-bottom: 4px;
+  background: #fff;
 
   .menu-group {
     display: flex;
@@ -32,7 +60,7 @@ header {
     height: 60px;
     padding: 0 16px;
     box-sizing: border-box;
-    box-shadow: 0 2px 5px rgba($color: #000, $alpha: 0.12);
+    @include customElevationEffect;
 
     .logo {
       margin-right: 32px;
@@ -69,7 +97,7 @@ header {
 
           &:hover {
             color: $primaryColor;
-            @include textColorChangeAnimation;
+            @include smoothChangeAnimation;
           }
         }
       }
@@ -79,8 +107,8 @@ header {
 
 // ranking
 .ranking {
-  height: 80px;
-  padding: 12px 0;
+  height: 90px;
+  padding: 16px 0;
   box-sizing: border-box;
   background: $backgroundColor;
 
@@ -119,14 +147,14 @@ header {
             display: flex;
 
             .ranking-number {
-              @include dm-subtitle-1;
+              @include guide.dm-subtitle-1;
               color: #fd8700;
               font-weight: 700;
               margin-right: 12px;
             }
 
             .title {
-              @include dm-subtitle-1;
+              @include guide.dm-subtitle-1;
               font-weight: 400;
             }
           }
@@ -143,7 +171,7 @@ header {
     .ranking-btn {
       display: flex;
       height: 100%;
-      background-color: #bcaaa4;
+      background-color: #607d8b;
       border-radius: 8px;
       padding: 8px 16px;
       box-sizing: border-box;
@@ -152,7 +180,7 @@ header {
 
       &:hover {
         background-color: $primaryColor-weak;
-        @include textColorChangeAnimation;
+        @include smoothChangeAnimation;
       }
     }
   }
@@ -161,25 +189,206 @@ header {
 // visual
 .visual {
   .glide {
-    .content-container {
-      // background: tomato;
-      position: absolute;
-      top: 25%;
-      margin-left: 16px;
+    .glide__slide {
+      position: relative;
+      .content-container {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        width: $sectionHeight;
+        top: 20%;
+        left: 40%;
+        transform: translate(-40%, 0);
 
-      h1 {
-        small {
-          display: block;
-          @include dm-headline-4;
-          font-weight: 300;
-          color: #fff;
-          margin-bottom: 20px;
+        h1 {
+          small {
+            display: block;
+            @include guide.dm-headline-4;
+            font-weight: 300;
+            color: #fff;
+            margin-bottom: 20px;
+          }
+          p {
+            @include guide.dm-headline-2;
+            font-weight: 600;
+            color: #fff;
+          }
         }
-        p {
-          @include dm-headline-2;
-          font-weight: 600;
-          color: #fff;
+
+        .content__button-group {
+          display: flex;
+          margin-top: 40px;
+          .outline-btn {
+            @include guide.dm-headline-6;
+            font-weight: 400;
+            border: 2px solid #fff;
+            border-radius: 4px;
+            padding: 20px 24px;
+            box-sizing: border-box;
+            align-items: center;
+            color: #fff;
+          }
+
+          .primary-btn {
+            display: flex;
+            @include guide.dm-headline-6;
+            font-weight: 400;
+            background: #fff;
+            border-radius: 4px;
+            padding: 20px 24px;
+            box-sizing: border-box;
+            align-items: center;
+            color: #000;
+          }
+
+          .app-download-btn {
+            margin-left: 24px;
+          }
         }
+      }
+    }
+  }
+}
+
+// key feature
+.key-feature {
+  padding: 60px 0;
+  margin-bottom: 24px;
+  background: #fff;
+  @include customElevationEffect;
+
+  .key-feature__container {
+    display: flex;
+    flex-direction: column;
+    max-width: 940px;
+    height: 100%;
+    margin: 0 auto;
+    .feature-title {
+      @include guide.dm-headline-5;
+      font-weight: 300;
+      color: #666;
+      text-align: center;
+      strong {
+        @include guide.dm-headline-4;
+        font-weight: 600;
+        color: #000;
+        display: block;
+        margin-top: 24px;
+      }
+    }
+    .feature-card-group {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 60px;
+      width: 100%;
+      height: 100%;
+      margin-top: 60px;
+
+      li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        img {
+          width: 160px;
+          height: 160px;
+        }
+        .feature-description {
+          h2 {
+            @include guide.dm-headline-6;
+            text-align: center;
+            margin-top: 20px;
+          }
+          h3 {
+            @include guide.dm-body-1;
+            line-height: 1.5;
+            text-align: center;
+            margin-top: 12px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// recommend
+.recommend {
+  height: 600px;
+  padding: 60px 0;
+  background: #fff;
+  margin-bottom: 24px;
+  @include customElevationEffect;
+
+  .recommend__container {
+    @include defaultContainerOptions;
+    .recommend__title {
+      @include guide.dm-headline-4;
+      font-weight: 600;
+      color: #000;
+    }
+  }
+  .recommend-card-group {
+    height: 100%;
+    margin-top: 32px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 260px;
+    gap: 24px;
+    li {
+      height: 260px;
+
+      .image-card {
+        display: block;
+        height: 100%;
+        border-radius: 8px;
+        @include customCardElevationEffect;
+        @include smoothChangeAnimation();
+
+        &:hover {
+          opacity: 0.5;
+        }
+
+        img {
+          width: 100%;
+          height: 130px;
+          object-fit: cover;
+          border-radius: 8px 8px 0 0;
+        }
+        .card-title-box {
+          padding: 16px 16px 24px 16px;
+          h2 {
+            @include guide.dm-subtitle-1;
+            font-weight: 500;
+            color: $primaryColor;
+          }
+          h3 {
+            margin-top: 16px;
+            @include guide.dm-headline-6;
+            color: #333;
+          }
+        }
+      }
+    }
+  }
+}
+
+// reviews
+.reviews {
+  height: 600px;
+  padding: 60px 0;
+  background: #fff;
+  margin-bottom: 24px;
+  @include customElevationEffect;
+  .reviews__container {
+    @include defaultContainerOptions;
+    .tab-wrap {
+      .tab {
+        .tab__button {
+        }
+      }
+      .tab__content {
+        display: none;
+        animation: fadeEffect 1s;
       }
     }
   }

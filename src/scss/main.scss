@@ -87,6 +87,26 @@ a {
   }
 }
 
+.download-button-group {
+  display: flex;
+  column-gap: 20px;
+  margin-top: 48px;
+  .google-app-link-button {
+    display: inline-block;
+    img {
+      width: 145px;
+      height: 48px;
+    }
+  }
+  .apple-app-link-button {
+    display: inline-block;
+    img {
+      width: 145px;
+      height: 48px;
+    }
+  }
+}
+
 // header
 header {
   margin-bottom: 4px;
@@ -454,25 +474,6 @@ header {
         }
       }
     }
-    .download-button-group {
-      display: flex;
-      column-gap: 20px;
-      margin-top: 48px;
-      .google-app-link-button {
-        display: inline-block;
-        img {
-          width: 145px;
-          height: 48px;
-        }
-      }
-      .apple-app-link-button {
-        display: inline-block;
-        img {
-          width: 145px;
-          height: 48px;
-        }
-      }
-    }
   }
 }
 
@@ -494,6 +495,108 @@ header {
       font-weight: 500;
       text-align: center;
       line-height: 1.3;
+    }
+  }
+}
+
+// footer
+footer {
+  background: #34464b;
+  .footer__container {
+    padding: 80px 0;
+    .footer__first-wrap {
+      display: flex;
+      max-width: 940px;
+      margin: 0 auto;
+      gap: 100px;
+      .app-link-wrap {
+        a {
+          display: block;
+          width: 180px;
+          img {
+            background-size: cover;
+            width: 100%;
+          }
+        }
+        .download-button-group {
+          flex-direction: column;
+          gap: 8px;
+          .google-app-link-button {
+            img {
+              width: 125px;
+              height: 42px;
+            }
+          }
+          .apple-app-link-button {
+            img {
+              width: 125px;
+              height: 42px;
+            }
+          }
+        }
+        .app-official-page {
+          @include guide.dm-caption;
+          color: #fff;
+          margin-top: 16px;
+        }
+      }
+
+      .sites-wrap {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        .sites {
+          height: 200px;
+          padding: 0 12px;
+
+          .menu-title {
+            @include guide.dm-subtitle-1;
+            font-weight: 500;
+            color: #91b5be;
+            margin-bottom: 32px;
+          }
+          ul {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            li {
+              a {
+                font-weight: 300;
+                color: #fff;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .footer__second-wrap {
+    max-width: 940px;
+    margin: 100px auto 0 auto;
+    border-top: 1px solid #fff;
+    .legal {
+      display: flex;
+      .policies {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 24px;
+        li {
+          a {
+            @include guide.dm-caption;
+            color: #fff;
+          }
+        }
+      }
+    }
+    .copyright-wrap {
+      margin-top: 52px;
+      span {
+        @include guide.dm-caption;
+        display: block;
+        margin-top: 16px;
+        color: rgba($color: #fff, $alpha: 0.6);
+      }
     }
   }
 }

@@ -424,3 +424,76 @@ header {
     }
   }
 }
+
+// app download section
+.app-download {
+  max-width: 100%;
+  height: 400px;
+  background: url(/asset/bg/app-download-background-1.jpg) 50% / cover;
+  background-size: cover;
+  color: #e6e6e6;
+  .app-download__container {
+    max-width: 940px;
+    margin: 0 auto;
+    padding: 80px 24px 0 24px;
+
+    .title-wrap {
+      h3 {
+        @include guide.dm-subtitle-1;
+        font-weight: 600;
+        opacity: 0.9;
+      }
+      h1 {
+        @include guide.dm-headline-4;
+        font-weight: 500;
+        margin-top: 32px;
+        line-height: 32px;
+        span {
+          display: block;
+          margin-top: 12px;
+        }
+      }
+    }
+    .download-button-group {
+      display: flex;
+      column-gap: 20px;
+      margin-top: 48px;
+      .google-app-link-button {
+        display: inline-block;
+        img {
+          width: 145px;
+          height: 48px;
+        }
+      }
+      .apple-app-link-button {
+        display: inline-block;
+        img {
+          width: 145px;
+          height: 48px;
+        }
+      }
+    }
+  }
+}
+
+//alliance
+.alliance {
+  position: relative;
+  height: 300px;
+  background: url(/asset/bg/alliance-bg.png) 50% / cover;
+  background-size: cover;
+
+  .alliance__container {
+    display: flex;
+    align-items: center;
+    max-width: 480px;
+    height: 100%;
+    margin: 0 auto;
+    h1 {
+      @include guide.dm-headline-4;
+      font-weight: 500;
+      text-align: center;
+      line-height: 1.3;
+    }
+  }
+}

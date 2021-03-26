@@ -410,3 +410,80 @@ header .menu-group .main-menu li a:hover {
   grid-auto-rows: 260px;
   gap: 24px;
 }
+
+.app-download {
+  max-width: 100%;
+  height: 400px;
+  background: url(/asset/bg/app-download-background-1.jpg) 50%/cover;
+  background-size: cover;
+  color: #e6e6e6;
+}
+.app-download .app-download__container {
+  max-width: 940px;
+  margin: 0 auto;
+  padding: 80px 24px 0 24px;
+}
+.app-download .app-download__container .title-wrap h3 {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.15px;
+  font-weight: 300;
+  font-weight: 600;
+  opacity: 0.9;
+}
+.app-download .app-download__container .title-wrap h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 34px;
+  letter-spacing: 0.25px;
+  font-weight: 300;
+  font-weight: 500;
+  margin-top: 32px;
+  line-height: 32px;
+}
+.app-download .app-download__container .title-wrap h1 span {
+  display: block;
+  margin-top: 12px;
+}
+.app-download .app-download__container .download-button-group {
+  display: flex;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  margin-top: 48px;
+}
+.app-download .app-download__container .download-button-group .google-app-link-button {
+  display: inline-block;
+}
+.app-download .app-download__container .download-button-group .google-app-link-button img {
+  width: 145px;
+  height: 48px;
+}
+.app-download .app-download__container .download-button-group .apple-app-link-button {
+  display: inline-block;
+}
+.app-download .app-download__container .download-button-group .apple-app-link-button img {
+  width: 145px;
+  height: 48px;
+}
+
+.alliance {
+  position: relative;
+  height: 300px;
+  background: url(/asset/bg/alliance-bg.png) 50%/cover;
+  background-size: cover;
+}
+.alliance .alliance__container {
+  display: flex;
+  align-items: center;
+  max-width: 480px;
+  height: 100%;
+  margin: 0 auto;
+}
+.alliance .alliance__container h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 34px;
+  letter-spacing: 0.25px;
+  font-weight: 300;
+  font-weight: 500;
+  text-align: center;
+  line-height: 1.3;
+}

@@ -145,7 +145,7 @@ header .menu-group .main-menu li a:hover {
 
 .ranking {
   height: 90px;
-  padding: 16px 0;
+  padding: 16px 16px;
   box-sizing: border-box;
   background: #fbfbfb;
 }
@@ -283,7 +283,7 @@ header .menu-group .main-menu li a:hover {
 }
 
 .key-feature {
-  padding: 60px 0;
+  padding: 60px 16px;
   margin-bottom: 24px;
   background: #fff;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.12);
@@ -332,12 +332,14 @@ header .menu-group .main-menu li a:hover {
   width: 160px;
   height: 160px;
 }
+.key-feature .key-feature__container .feature-card-group li .feature-description {
+  text-align: center;
+}
 .key-feature .key-feature__container .feature-card-group li .feature-description h2 {
   font-family: "Roboto", sans-serif;
   font-size: 20px;
   letter-spacing: 0.15px;
   font-weight: 400;
-  text-align: center;
   margin-top: 20px;
 }
 .key-feature .key-feature__container .feature-card-group li .feature-description h3 {
@@ -346,13 +348,12 @@ header .menu-group .main-menu li a:hover {
   letter-spacing: 0.5px;
   font-weight: 300;
   line-height: 1.5;
-  text-align: center;
   margin-top: 12px;
 }
 
 .recommend {
-  height: 600px;
-  padding: 60px 0;
+  min-height: 600px;
+  padding: 60px 16px;
   background: #fff;
   margin-bottom: 24px;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.12);
@@ -376,7 +377,7 @@ header .menu-group .main-menu li a:hover {
 }
 
 .reviews {
-  padding: 60px 0;
+  padding: 60px 16px;
   background: #fff;
   margin-bottom: 24px;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.12);
@@ -493,7 +494,7 @@ footer {
   background: #34464b;
 }
 footer .footer__container {
-  padding: 80px 0;
+  padding: 80px 16px;
 }
 footer .footer__container .footer__first-wrap {
   display: flex;
@@ -588,4 +589,89 @@ footer .footer__second-wrap .copyright-wrap span {
   display: block;
   margin-top: 16px;
   color: rgba(255, 255, 255, 0.6);
+}
+
+@media (max-width: 768px) {
+  header .menu-group .logo {
+    width: 140px;
+    height: 16px;
+  }
+
+  .visual .glide .glide__track .glide__slides .content-container {
+    top: 20%;
+    left: 50%;
+  }
+  .visual .glide .glide__track .glide__slides h1 small {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+  .visual .glide .glide__track .glide__slides h1 p {
+    font-size: 36px;
+  }
+  .visual .glide .glide__track .glide__slides li img {
+    height: 380px;
+  }
+  .visual .glide .glide__track .glide__slides .content__button-group .outline-btn {
+    font-size: 16px;
+    padding: 16px 20px;
+  }
+  .visual .glide .glide__track .glide__slides .content__button-group .primary-btn {
+    font-size: 16px;
+    padding: 16px 20px;
+  }
+  .visual .glide .glide__track .glide__slides .content__button-group .app-download-btn {
+    margin-left: 20px;
+  }
+  .visual .glide .glide__track .glide__arrows .custom-arrow--left {
+    width: 48px;
+    height: 48px;
+  }
+  .visual .glide .glide__track .glide__arrows .custom-arrow--right {
+    width: 48px;
+    height: 48px;
+  }
+  .visual .glide .glide__track .glide__bullets .glide__bullet {
+    width: 16px;
+    height: 16px;
+  }
+
+  section.key-feature .key-feature__container .feature-card-group {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  section.key-feature .key-feature__container .feature-card-group li {
+    flex-direction: row;
+    margin-bottom: 24px;
+  }
+  section.key-feature .key-feature__container .feature-card-group li:last-child {
+    margin-bottom: 0px;
+  }
+  section.key-feature .key-feature__container .feature-card-group li img {
+    width: 80px;
+    height: 80px;
+    margin-right: 24px;
+  }
+  section.key-feature .key-feature__container .feature-card-group li .feature-description {
+    text-align: left;
+  }
+  section.key-feature .key-feature__container .feature-card-group li .feature-description h2 {
+    font-size: 16px;
+  }
+  section.key-feature .key-feature__container .feature-card-group li .feature-description h3 {
+    font-size: 14px;
+  }
+
+  section.recommend .recommend__container .recommend-card-group {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  section.reviews .reviews__container .tab-wrap .tab__content .content__wrap {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  footer .footer__container .footer__first-wrap .sites-wrap .sites .menu-title {
+    font-size: 16px;
+  }
+  footer .footer__container .footer__first-wrap .sites-wrap .sites ul li a {
+    font-size: 12px;
+  }
 }

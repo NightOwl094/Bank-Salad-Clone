@@ -1,0 +1,149 @@
+@media (max-width: 768px) {
+  // header
+  header {
+    .menu-group {
+      .logo {
+        width: 140px;
+        height: 16px;
+      }
+    }
+  }
+
+  // visual
+  .visual {
+    .glide {
+      .glide__track {
+        .glide__slides {
+          .content-container {
+            top: 20%;
+            left: 50%;
+          }
+
+          h1 {
+            small {
+              font-size: 24px;
+              margin-bottom: 16px;
+            }
+            p {
+              font-size: 36px;
+            }
+          }
+
+          li {
+            img {
+              height: 380px;
+            }
+          }
+
+          .content__button-group {
+            .outline-btn {
+              font-size: 16px;
+              padding: 16px 20px;
+            }
+            .primary-btn {
+              font-size: 16px;
+              padding: 16px 20px;
+            }
+            .app-download-btn {
+              margin-left: 20px;
+            }
+          }
+        }
+        .glide__arrows {
+          .custom-arrow--left {
+            width: 48px;
+            height: 48px;
+          }
+
+          .custom-arrow--right {
+            width: 48px;
+            height: 48px;
+          }
+        }
+        .glide__bullets {
+          .glide__bullet {
+            width: 16px;
+            height: 16px;
+          }
+        }
+      }
+    }
+  }
+
+  // key-feature
+  section.key-feature {
+    .key-feature__container {
+      .feature-card-group {
+        grid-template-columns: repeat(1, 1fr);
+        li {
+          flex-direction: row;
+          margin-bottom: 24px;
+
+          &:last-child {
+            margin-bottom: 0px;
+          }
+
+          img {
+            width: 80px;
+            height: 80px;
+            margin-right: 24px;
+          }
+
+          .feature-description {
+            text-align: left;
+            h2 {
+              font-size: 16px;
+            }
+            h3 {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // recommend
+  section.recommend {
+    .recommend__container {
+      .recommend-card-group {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  }
+
+  // reviews
+  section.reviews {
+    .reviews__container {
+      .tab-wrap {
+        .tab__content {
+          .content__wrap {
+            grid-template-columns: repeat(3, 1fr);
+          }
+        }
+      }
+    }
+  }
+
+  // footer
+  footer {
+    .footer__container {
+      .footer__first-wrap {
+        .sites-wrap {
+          .sites {
+            .menu-title {
+              font-size: 16px;
+            }
+            ul {
+              li {
+                a {
+                  font-size: 12px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

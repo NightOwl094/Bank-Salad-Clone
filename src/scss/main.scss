@@ -166,7 +166,7 @@ header {
 // ranking
 .ranking {
   height: 90px;
-  padding: 16px 0;
+  padding: 16px 16px;
   box-sizing: border-box;
   background: $backgroundColor;
 
@@ -310,7 +310,7 @@ header {
 
 // key feature
 .key-feature {
-  padding: 60px 0;
+  padding: 60px 16px;
   margin-bottom: 24px;
   background: #fff;
   @include customElevationEffect;
@@ -352,15 +352,15 @@ header {
           height: 160px;
         }
         .feature-description {
+          text-align: center;
+
           h2 {
             @include guide.dm-headline-6;
-            text-align: center;
             margin-top: 20px;
           }
           h3 {
             @include guide.dm-body-1;
             line-height: 1.5;
-            text-align: center;
             margin-top: 12px;
           }
         }
@@ -371,8 +371,8 @@ header {
 
 // recommend
 .recommend {
-  height: 600px;
-  padding: 60px 0;
+  min-height: 600px;
+  padding: 60px 16px;
   background: #fff;
   margin-bottom: 24px;
   @include customElevationEffect;
@@ -395,7 +395,7 @@ header {
 
 // reviews
 .reviews {
-  padding: 60px 0;
+  padding: 60px 16px;
   background: #fff;
   margin-bottom: 24px;
   @include customElevationEffect;
@@ -503,7 +503,7 @@ header {
 footer {
   background: #34464b;
   .footer__container {
-    padding: 80px 0;
+    padding: 80px 16px;
     .footer__first-wrap {
       display: flex;
       max-width: 940px;
@@ -600,3 +600,5 @@ footer {
     }
   }
 }
+
+@import "./main-medium";

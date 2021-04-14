@@ -109,6 +109,9 @@ header .menu-group {
   box-sizing: border-box;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.12);
 }
+header .menu-group .mobile-menu-button {
+  display: none;
+}
 header .menu-group .logo {
   margin-right: 32px;
   width: 180px;
@@ -224,7 +227,7 @@ header .menu-group .main-menu li a:hover {
   display: flex;
   flex-direction: column;
   position: absolute;
-  width: 600px;
+  max-width: 600px;
   top: 20%;
   left: 40%;
   transform: translate(-40%, 0);
@@ -436,7 +439,7 @@ header .menu-group .main-menu li a:hover {
 .app-download {
   max-width: 100%;
   height: 400px;
-  background: url(/asset/bg/app-download-background-1.jpg) 50%/cover;
+  background: url(../../asset/bg/app-download-background-1.jpg) 50%/cover;
   background-size: cover;
   color: #e6e6e6;
 }
@@ -470,7 +473,7 @@ header .menu-group .main-menu li a:hover {
 .alliance {
   position: relative;
   height: 300px;
-  background: url(/asset/bg/alliance-bg.png) 50%/cover;
+  background: url(../../asset/bg/alliance-bg.png) 50%/cover;
   background-size: cover;
 }
 .alliance .alliance__container {
@@ -571,6 +574,9 @@ footer .footer__second-wrap .legal .policies {
   width: 100%;
   margin-top: 24px;
 }
+footer .footer__second-wrap .legal .policies .footer__mobile-logo {
+  display: none;
+}
 footer .footer__second-wrap .legal .policies li a {
   font-family: "Roboto", sans-serif;
   font-size: 12px;
@@ -589,6 +595,9 @@ footer .footer__second-wrap .copyright-wrap span {
   display: block;
   margin-top: 16px;
   color: rgba(255, 255, 255, 0.6);
+}
+footer .footer__third-wrap--mobile {
+  display: none;
 }
 
 @media (max-width: 768px) {
@@ -673,5 +682,193 @@ footer .footer__second-wrap .copyright-wrap span {
   }
   footer .footer__container .footer__first-wrap .sites-wrap .sites ul li a {
     font-size: 12px;
+  }
+}
+@media (max-width: 375px) {
+  header .menu-group .mobile-menu-button {
+    display: block;
+    margin-right: 12px;
+    cursor: pointer;
+  }
+  header .menu-group .logo {
+    padding-bottom: 0;
+  }
+  header .menu-group .main-menu {
+    display: none;
+  }
+
+  .ranking {
+    height: 60px;
+    padding: 8px;
+  }
+  .ranking .ranking__container .ranking__animation {
+    margin-right: 8px;
+  }
+  .ranking .ranking__container .ranking__animation a .ranking-list li img {
+    display: none;
+  }
+  .ranking .ranking__container .ranking-btn {
+    padding: 0 8px;
+    font-size: 12px;
+  }
+
+  .visual .visual__container .content-container {
+    transform: translate(-50%, 0) !important;
+  }
+  .visual .visual__container .content-container .content__button-group {
+    flex-direction: column;
+  }
+  .visual .visual__container .content-container .content__button-group a {
+    display: flex;
+    justify-content: center;
+  }
+  .visual .visual__container .content-container .content__button-group .outline-btn {
+    width: 80%;
+    margin: 0 auto;
+    padding: 12px !important;
+  }
+  .visual .visual__container .content-container .content__button-group .app-download-btn {
+    width: 80%;
+    margin: 12px auto 0 auto !important;
+    padding: 12px !important;
+  }
+  .visual .visual__container .custom-arrow--left {
+    left: 0 !important;
+  }
+  .visual .visual__container .custom-arrow--right {
+    right: 0 !important;
+  }
+
+  .key-feature .key-feature__container .feature-title {
+    font-size: 18px;
+  }
+  .key-feature .key-feature__container .feature-title strong {
+    font-size: 28px;
+  }
+  .key-feature .key-feature__container .feature-title strong span {
+    display: block;
+    margin-top: 4px;
+  }
+
+  section.recommend .recommend__container .recommend-card-group {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 180px);
+  }
+  section.recommend .recommend__container .recommend-card-group li {
+    height: 100%;
+  }
+  section.recommend .recommend__container .recommend-card-group li .image-card img {
+    height: 80px;
+  }
+  section.recommend .recommend__container .recommend-card-group li .image-card .card-title-box h3 {
+    font-size: 16px;
+  }
+
+  section.reviews .reviews__container .tab-wrap .tab {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  section.reviews .reviews__container .tab-wrap .tab .tab__button:nth-child(1) {
+    border-bottom: 2px solid #f5f5f5;
+  }
+  section.reviews .reviews__container .tab-wrap .tab .tab__button:nth-child(2) {
+    border-bottom: 2px solid #f5f5f5;
+  }
+  section.reviews .reviews__container .tab-wrap .tab .tab__button:nth-child(3) {
+    border-bottom: 2px solid #f5f5f5;
+  }
+  section.reviews .reviews__container .tab-wrap .tab__content .content__wrap {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 180px);
+  }
+  section.reviews .reviews__container .tab-wrap .tab__content .content__wrap li .image-card img {
+    height: 80px;
+  }
+  section.reviews .reviews__container .tab-wrap .tab__content .content__wrap li .image-card .card-title-box h3 {
+    font-size: 16px;
+  }
+
+  section.app-download .app-download__container {
+    padding-top: 50px;
+  }
+  section.app-download .app-download__container .title-wrap h3 {
+    font-size: 14px;
+  }
+  section.app-download .app-download__container .title-wrap h1 {
+    font-size: 28px;
+  }
+  section.app-download .app-download__container .title-wrap h1 span {
+    margin-top: 4px;
+  }
+  section.app-download .app-download__container .download-button-group {
+    flex-direction: column;
+  }
+  section.app-download .app-download__container .download-button-group .apple-app-link-button {
+    margin-top: 8px;
+  }
+
+  section.alliance {
+    height: 240px;
+  }
+  section.alliance .alliance__container h1 {
+    font-size: 24px;
+    margin: 0 auto;
+  }
+  section.alliance .alliance__container h1 span {
+    display: block;
+  }
+
+  footer .footer__container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  footer .footer__container .footer__first-wrap {
+    flex-direction: column-reverse;
+    gap: 0;
+  }
+  footer .footer__container .footer__first-wrap .sites-wrap {
+    gap: 60px;
+    flex-direction: column;
+  }
+  footer .footer__container .footer__first-wrap .sites-wrap .sites {
+    height: auto;
+    padding: 0;
+  }
+  footer .footer__container .footer__first-wrap .sites-wrap .sites h4 {
+    font-size: 16px;
+  }
+  footer .footer__container .footer__first-wrap .sites-wrap .sites ul li a {
+    font-size: 14px;
+  }
+  footer .footer__container .footer__first-wrap .app-link-wrap {
+    display: none;
+  }
+  footer .footer__container .footer__second-wrap {
+    margin-top: 60px;
+  }
+  footer .footer__container .footer__second-wrap .legal .policies {
+    flex-direction: column;
+    gap: 12px;
+  }
+  footer .footer__container .footer__second-wrap .legal .policies .footer__mobile-logo {
+    margin: 20px 0;
+    width: 160px;
+  }
+  footer .footer__container .footer__second-wrap .legal .policies .footer__mobile-logo img {
+    background-size: cover;
+    width: 100%;
+  }
+  footer .footer__container .footer__second-wrap .copyright-wrap span {
+    line-height: 1.5;
+  }
+  footer .footer__container .footer__third-wrap--mobile .app-link-wrap {
+    text-align: center;
+  }
+  footer .footer__container .footer__third-wrap--mobile .app-link-wrap .download-button-group {
+    justify-content: center;
+    margin-bottom: 12px;
+  }
+  footer .footer__container .footer__third-wrap--mobile .app-link-wrap .app-official-page {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.3);
   }
 }

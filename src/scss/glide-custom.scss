@@ -33,12 +33,12 @@
       display: flex;
 
       .custom-arrow--left {
-        background: url(/asset/material-icons/keyboard_arrow_left-white-48dp.svg);
+        background: url(../../asset/material-icons/keyboard_arrow_left-white-48dp.svg);
         @include arrow-button();
       }
 
       .custom-arrow--right {
-        background: url(/asset/material-icons/keyboard_arrow_right-white-48dp.svg);
+        background: url(../../asset/material-icons/keyboard_arrow_right-white-48dp.svg);
         @include arrow-button();
       }
     }

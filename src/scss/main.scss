@@ -120,6 +120,10 @@ header {
     box-sizing: border-box;
     @include customElevationEffect;
 
+    .mobile-menu-button {
+      display: none;
+    }
+
     .logo {
       margin-right: 32px;
       width: 180px;
@@ -253,7 +257,7 @@ header {
         display: flex;
         flex-direction: column;
         position: absolute;
-        width: $sectionHeight;
+        max-width: $sectionHeight;
         top: 20%;
         left: 40%;
         transform: translate(-40%, 0);
@@ -449,7 +453,7 @@ header {
 .app-download {
   max-width: 100%;
   height: 400px;
-  background: url(/asset/bg/app-download-background-1.jpg) 50% / cover;
+  background: url(../../asset/bg/app-download-background-1.jpg) 50% / cover;
   background-size: cover;
   color: #e6e6e6;
   .app-download__container {
@@ -481,7 +485,7 @@ header {
 .alliance {
   position: relative;
   height: 300px;
-  background: url(/asset/bg/alliance-bg.png) 50% / cover;
+  background: url(../../asset/bg/alliance-bg.png) 50% / cover;
   background-size: cover;
 
   .alliance__container {
@@ -581,6 +585,9 @@ footer {
         justify-content: space-between;
         width: 100%;
         margin-top: 24px;
+        .footer__mobile-logo {
+          display: none;
+        }
         li {
           a {
             @include guide.dm-caption;
@@ -599,6 +606,10 @@ footer {
       }
     }
   }
+  .footer__third-wrap--mobile {
+    display: none;
+  }
 }
 
 @import "./main-medium";
+@import "./main_small";

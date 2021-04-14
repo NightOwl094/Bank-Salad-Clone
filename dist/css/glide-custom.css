@@ -20,7 +20,7 @@
   display: flex;
 }
 .glide .glide__track .glide__arrows .custom-arrow--left {
-  background: url(/asset/material-icons/keyboard_arrow_left-white-48dp.svg);
+  background: url(../../asset/material-icons/keyboard_arrow_left-white-48dp.svg);
   background-size: cover;
   border: none;
   outline: none;
@@ -30,7 +30,7 @@
   opacity: 0.8;
 }
 .glide .glide__track .glide__arrows .custom-arrow--right {
-  background: url(/asset/material-icons/keyboard_arrow_right-white-48dp.svg);
+  background: url(../../asset/material-icons/keyboard_arrow_right-white-48dp.svg);
   background-size: cover;
   border: none;
   outline: none;
